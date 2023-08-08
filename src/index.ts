@@ -13,13 +13,17 @@ let courses = "Typescripts";
 let is_publishing = true;
 let levels; //type is assumed to be "any"
 
+//--------------------------------------------------------------------------------------------------------------------
 
 let number = []; //this is type any
 let numbers: number[] = []; //this is type number[]
 
 numbers.forEach(n => n.toPrecision);
 console.log(numbers)
-    
+   
+
+
+//--------------------------------------------------------------------------------------------------------------------
 
 // Tuple 
 let user: [number, string] = [1, "jx"];
@@ -29,6 +33,40 @@ user[1].matchAll;
 user.push(1)
 
 
+
+//--------------------------------------------------------------------------------------------------------------------
+
 // Internally tuples are represented using plain javascript array
 
 //restrict your tutples to only two values
+
+
+
+//Enum represents a list of related constants
+
+const small = 1;
+const medium = 2;
+const large = 3;
+
+// we can use Enum to replace the constants above
+
+
+//use PascalCase
+enum Size { Small = 1, Medium, Large }; // tsc will set Medium and Large to 2 and 3 respectively
+enum Size { SmallOne = "s", MediumOne = "m", LargeOne = "l" }; // if we use letters we have to set each one
+
+let mySize: Size = Size.Medium;
+
+console.log(mySize)
+
+
+//************************************************************************************************** */
+
+//The code above will e very verbose in index.js when compiled, but if we define enum as const index.js will produce a concise code:
+const enum SizeOne { Small = 1, Medium, Large }; // tsc will set Medium and Large to 2 and 3 respectively
+const enum SizeOne { SmallOne = "s", MediumOne = "m", LargeOne = "l" }; // if we use letters we have to set each one
+
+let mySizeTwo: Size = Size.Medium;
+
+console.log(mySizeTwo);
+

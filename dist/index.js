@@ -1,8 +1,40 @@
 "use strict";
-let age = 20;
-if (age > 50) {
-    age += 10;
-}
+let sales = 123456789;
+let course = "Typescript";
+let is_published = true;
+let level;
+let saler = 1234567890;
+let courses = "Typescripts";
+let is_publishing = true;
+let levels;
+let number = [];
+let numbers = [];
+numbers.forEach(n => n.toPrecision);
+console.log(numbers);
+let user = [1, "jx"];
+user[0].toLocaleString;
+user[1].matchAll;
+user.push(1);
+const small = 1;
+const medium = 2;
+const large = 3;
+var Size;
+(function (Size) {
+    Size[Size["Small"] = 1] = "Small";
+    Size[Size["Medium"] = 2] = "Medium";
+    Size[Size["Large"] = 3] = "Large";
+})(Size || (Size = {}));
 ;
-console.log(age);
+(function (Size) {
+    Size["SmallOne"] = "s";
+    Size["MediumOne"] = "m";
+    Size["LargeOne"] = "l";
+})(Size || (Size = {}));
+;
+let mySize = Size.Medium;
+console.log(mySize);
+;
+;
+let mySizeTwo = Size.Medium;
+console.log(mySizeTwo);
 //# sourceMappingURL=index.js.map
