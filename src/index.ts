@@ -1,5 +1,4 @@
-import { NumericLiteral } from "@babel/types";
-import { type } from "os";
+
 
 let sales: number = 123_456_789;
 let course: string = "Typescript";
@@ -208,3 +207,43 @@ let textBox: UIWidget = {
     drag: () => { },
     resize: () => {}
 }
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+//----Literal Types---
+
+//Literal means exact or specific
+
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metric = "cm" | "inch";
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+//----Nullable Types---
+
+function greet(name: string | null | undefined) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log("Hola")
+};
+
+
+greet(null);
