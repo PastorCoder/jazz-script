@@ -110,3 +110,23 @@ function calculateTaxTwo(income: number, taxYear = 2022): number {
  
 calculateTaxTwo(10_000);//you can supply only one parameter here
 
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+//----Object---
+
+let employee: {
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+    name: "Jx",
+    retire: (date: Date) => {
+        console.log(date);
+    }
+}
+
