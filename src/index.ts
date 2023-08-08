@@ -12,3 +12,7 @@ let saler  = 123_456_7890;
 let courses = "Typescripts";
 let is_publishing = true;
 let levels; //type is assumed to be "any"
+
+
+let number = []; //this is type any
+let numbers: number[] = []; //this is type number[]
