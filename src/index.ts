@@ -16,3 +16,6 @@ let levels; //type is assumed to be "any"
 
 let number = []; //this is type any
 let numbers: number[] = []; //this is type number[]
+
+numbers.forEach(n => n.toPrecision);
+    console.log(numbers)
