@@ -1,4 +1,5 @@
 import { NumericLiteral } from "@babel/types";
+import { type } from "os";
 
 let sales: number = 123_456_789;
 let course: string = "Typescript";
@@ -130,3 +131,56 @@ let employee: {
     }
 }
 
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+//----Type Aliases---
+
+
+type Employee = {
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+}
+
+let employeeTwo: Employee = {
+    id: 1,
+    name: "Jx",
+    retire: (date: Date) => {
+        console.log(date);
+    }
+}
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+//----Union Types---
+
+//with union types we can give a variable or a function more than one type
+
+
+function kgToLbs(weight: number | string): number {
+    
+    //Narrowing
+    if (typeof weight === "number")
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
+};
+
+kgToLbs(10);
+kgToLbs("10kg");
