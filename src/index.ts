@@ -1,3 +1,5 @@
+import { NumericLiteral } from "@babel/types";
+
 let sales: number = 123_456_789;
 let course: string = "Typescript";
 let is_published: boolean = true;
@@ -36,6 +38,7 @@ user.push(1)
 
 //--------------------------------------------------------------------------------------------------------------------
 
+//----Tuple----
 // Internally tuples are represented using plain javascript array
 
 //restrict your tutples to only two values
@@ -69,4 +72,41 @@ const enum SizeOne { SmallOne = "s", MediumOne = "m", LargeOne = "l" }; // if we
 let mySizeTwo: Size = Size.Medium;
 
 console.log(mySizeTwo);
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+//------Function------
+
+
+// function calculateTax(income: number, taxYear: number): number {
+//     if (income < taxYear) 
+//         return income * 1.2;
+//     return income * 1.3
+// };
+// calculateTax(10_000, 2022); //two parameters must be supplied here
+
+function calculateTax(income: number, taxYear = 2022): number {
+    if ((taxYear || 2022) < 2022) 
+        return income * 1.2;
+    return income * 1.3
+}
+
+calculateTax(10_000);//you can supply only one parameter here
+
+/**(taxYear || 2022) < 2022)  and (income: number, taxYear = 2022) is doing the same work in the sense that they 
+are trying to give taxYear a value and not allow it defaukt to undefined. iether can be used like this: */
+function calculateTaxTwo(income: number, taxYear = 2022): number {
+    if (taxYear < 2022) 
+        return income * 1.2;
+    return income * 1.3
+}
+ 
+calculateTaxTwo(10_000);//you can supply only one parameter here
 
